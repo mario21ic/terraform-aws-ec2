@@ -7,50 +7,50 @@ variable "key_name" {
 }
 
 variable "ami_name" {
-  type        = "string"
+  type        = string
   description = "AMI name"
 }
 
 variable "name" {
-  type        = "string"
+  type        = string
   description = "instance name"
 }
 
 variable "env" {
-  type        = "string"
+  type        = string
   description = "Environment name"
 }
 
 variable "instance_type" {
   description = "The instance type to launch"
-  default = "t2.micro"
+  default     = "t2.micro"
 }
 
 variable "create_public_ip" {
-  default = false
+  default     = false
   description = "Create a public ip address"
 }
 
 variable "disable_termination" {
   description = "Disable terminations"
-  default = false
+  default     = false
 }
 
 variable "volume_size" {
   description = "Volume size in gb"
-  default = 30
+  default     = 30
 }
 
 variable "security_group_ids" {
-  type = "list"
+  type        = list(string)
   description = "Security group ids"
-  default = []
+  default     = []
 }
 
 variable "iam_instance_profile" {
-  type        = "string"
+  type        = string
   description = "iam profile"
-  default = ""
+  default     = ""
 }
 
 //variable "codedeploy_tag" {

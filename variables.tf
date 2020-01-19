@@ -11,9 +11,9 @@ variable "ami_name" {
   description = "AMI name"
 }
 
-variable "name" {
+variable "owner" {
   type        = "string"
-  description = "instance name"
+  default     = "amazon" #self, aws-marketplace, microsoft
 }
 
 variable "env" {

@@ -16,6 +16,11 @@ variable "owner" {
   default     = "amazon" #self, aws-marketplace, microsoft
 }
 
+variable "name" {
+  type        = "string"
+  default     = "Instance name"
+}
+
 variable "env" {
   type        = "string"
   description = "Environment name"

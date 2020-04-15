@@ -14,7 +14,7 @@ resource "aws_instance" "ec2" {
   ami                     = "${data.aws_ami.backend.id}"
   instance_type           = "${var.instance_type}"
   key_name                = "${var.key_name}"
-  //  user_data              = "${file("get-latest.sh")}"
+  user_data              = "${file("user_data.sh")}"
 
   vpc_security_group_ids  = ["${var.security_group_ids}"]
   subnet_id               = "${var.subnet_id}"

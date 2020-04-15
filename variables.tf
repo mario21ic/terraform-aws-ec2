@@ -74,3 +74,7 @@ variable "private_ip" {
 //  default = ""
 //  description = "Elastic IP"
 //}
+
+variable "user_data" {
+  description = "file content to execute when ec2 starts"
+}
